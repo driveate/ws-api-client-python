@@ -14,12 +14,10 @@ Python 2.7 and 3.4+
 ## Installation & Usage
 ### pip install
 
-If the python package is hosted on Github, you can install directly from Github
-
 ```sh
-pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
+pip install git+https://github.com/driveate/ws-api-client-python.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git`)
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/driveate/ws-api-client-python.git`)
 
 Then import the package:
 ```python
@@ -54,26 +52,16 @@ from pprint import pprint
 # Configure API key authorization: user_key
 ws_api_client.configuration.default_config.api_key['user_key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# ws_api_client.configuration.api_key_prefix['user_key'] = 'Bearer'
+# ws_api_client.configuration.default_config.api_key_prefix['user_key'] = 'Bearer'
 # create an instance of the API class
-api_instance = ws_api_client.BoltPatternsApi()
-stud = 8.14 # float | Number of stud holes (e.g. `5`) (optional)
-stud_min = 8.14 # float | Lower bound for number of stud holes (e.g. `4`) (optional)
-stud_max = 8.14 # float | Upper bound for number of stud holes (e.g. `7`) (optional)
-pcd = 8.14 # float | Pitch circle diameter, mm (e.g. `115`) (optional)
-pcd_min = 8.14 # float | Lower bound for pitch circle diameter, mm (e.g. `105`) (optional)
-pcd_max = 8.14 # float | Upper bound for pitch circle diameter, mm (e.g. `135`) (optional)
-brands = 'brands_example' # str | Show information only for specified manufacturers. Use _**`GET /makes/`**_ method to get the full list. (e.g. `mitsubishi,nissan,toyota`) (optional)
-brands_exclude = 'brands_exclude_example' # str | Don't show information for specified manufacturers. Use _**`GET /makes/`**_ method to get the full list. (e.g. `geely,great-wall`) (optional)
-countries = 'countries_example' # str | Show information for local manufacturers from specified countries only. Use _**`GET /countries/`**_ method to get the full list of countries. (e.g. `us,gb,jp`) (optional)
-countries_exclude = 'countries_exclude_example' # str | Don't show information for local manufacturers from specified countries. Use _**`GET /countries/`**_ method to get the full list of countries. (e.g. `ru,ua`) (optional)
-
+api_instance = ws_api_client.MakesApi()
+countries = 'us,gb,jp' # str | Show information for local manufacturers from specified countries only. Use _**`GET /countries/`**_ method to get the full list of countries. (e.g. `us,gb,jp`) (optional)
 try:
     # Get list of bolt patterns
-    api_response = api_instance.bolt_patterns_list(stud=stud, stud_min=stud_min, stud_max=stud_max, pcd=pcd, pcd_min=pcd_min, pcd_max=pcd_max, brands=brands, brands_exclude=brands_exclude, countries=countries, countries_exclude=countries_exclude)
+    api_response = api_instance.makes_list(countries=countries)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling BoltPatternsApi->bolt_patterns_list: %s\n" % e)
+    print("Exception when calling MakesApi->makes_list: %s\n" % e)
 
 ```
 
