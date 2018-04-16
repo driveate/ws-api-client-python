@@ -51,13 +51,11 @@ from pprint import pprint
 
 # Configure API key authorization: user_key
 ws_api_client.configuration.default_config.api_key['user_key'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# ws_api_client.configuration.default_config.api_key_prefix['user_key'] = 'Bearer'
 # create an instance of the API class
 api_instance = ws_api_client.MakesApi()
-countries = 'us,gb,jp' # str | Show information for local manufacturers from specified countries only. Use _**`GET /countries/`**_ method to get the full list of countries. (e.g. `us,gb,jp`) (optional)
+countries = 'us,gb,jp' # str | Show information for local manufacturers from specified countries only. Use `GET /countries/` method to get the full list of countries. (e.g. `us,gb,jp`) (optional)
 try:
-    # Get list of bolt patterns
+    # Get list of manufacturers
     api_response = api_instance.makes_list(countries=countries)
     pprint(api_response)
 except ApiException as e:
