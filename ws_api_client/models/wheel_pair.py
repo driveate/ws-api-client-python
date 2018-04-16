@@ -16,7 +16,7 @@ import re  # noqa: F401
 
 import six
 
-from swagger_client.models.wheel import Wheel  # noqa: F401,E501
+from ws_api_client.models.wheel import Wheel  # noqa: F401,E501
 
 
 class WheelPair(object):

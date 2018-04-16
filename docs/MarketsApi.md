@@ -1,4 +1,4 @@
-# swagger_client.MarketsApi
+# ws_api_client.MarketsApi
 
 All URIs are relative to *https://api.wheel-size.com/v1*
 
@@ -18,18 +18,18 @@ Get a list of possible markets (regions)
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import ws_api_client
+from ws_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: user_key
-configuration = swagger_client.Configuration()
+configuration = ws_api_client.Configuration()
 configuration.api_key['user_key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['user_key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.MarketsApi(swagger_client.ApiClient(configuration))
+api_instance = ws_api_client.MarketsApi(ws_api_client.ApiClient(configuration))
 lang = 'lang_example' # str | Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn`. Currently translation works for chinese `zh-cn` language only (optional)
 
 try:

@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.year import Year  # noqa: E501
-from swagger_client.rest import ApiException
+import ws_api_client
+from ws_api_client.models.year import Year  # noqa: E501
+from ws_api_client.rest import ApiException
 
 
 class TestYear(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestYear(unittest.TestCase):
     def testYear(self):
         """Test Year"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.year.Year()  # noqa: E501
+        # model = ws_api_client.models.year.Year()  # noqa: E501
         pass
 
 

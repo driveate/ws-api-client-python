@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.trim import Trim  # noqa: E501
-from swagger_client.rest import ApiException
+import ws_api_client
+from ws_api_client.models.trim import Trim  # noqa: E501
+from ws_api_client.rest import ApiException
 
 
 class TestTrim(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestTrim(unittest.TestCase):
     def testTrim(self):
         """Test Trim"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.trim.Trim()  # noqa: E501
+        # model = ws_api_client.models.trim.Trim()  # noqa: E501
         pass
 
 

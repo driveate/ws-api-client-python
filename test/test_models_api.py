@@ -15,16 +15,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.api.models_api import ModelsApi  # noqa: E501
-from swagger_client.rest import ApiException
+import ws_api_client
+from ws_api_client.api.models_api import ModelsApi  # noqa: E501
+from ws_api_client.rest import ApiException
 
 
 class TestModelsApi(unittest.TestCase):
     """ModelsApi unit test stubs"""
 
     def setUp(self):
-        self.api = swagger_client.api.models_api.ModelsApi()  # noqa: E501
+        self.api = ws_api_client.api.models_api.ModelsApi()  # noqa: E501
 
     def tearDown(self):
         pass

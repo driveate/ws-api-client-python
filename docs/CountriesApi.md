@@ -1,4 +1,4 @@
-# swagger_client.CountriesApi
+# ws_api_client.CountriesApi
 
 All URIs are relative to *https://api.wheel-size.com/v1*
 
@@ -18,18 +18,18 @@ List of possible countries to be used in any other API method. Indended to be us
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import ws_api_client
+from ws_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: user_key
-configuration = swagger_client.Configuration()
+configuration = ws_api_client.Configuration()
 configuration.api_key['user_key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['user_key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.CountriesApi(swagger_client.ApiClient(configuration))
+api_instance = ws_api_client.CountriesApi(ws_api_client.ApiClient(configuration))
 
 try:
     # Returns a list of countries

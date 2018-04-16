@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.generation import Generation  # noqa: E501
-from swagger_client.rest import ApiException
+import ws_api_client
+from ws_api_client.models.generation import Generation  # noqa: E501
+from ws_api_client.rest import ApiException
 
 
 class TestGeneration(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestGeneration(unittest.TestCase):
     def testGeneration(self):
         """Test Generation"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.generation.Generation()  # noqa: E501
+        # model = ws_api_client.models.generation.Generation()  # noqa: E501
         pass
 
 

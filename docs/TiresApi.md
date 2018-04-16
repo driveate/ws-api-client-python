@@ -1,4 +1,4 @@
-# swagger_client.TiresApi
+# ws_api_client.TiresApi
 
 All URIs are relative to *https://api.wheel-size.com/v1*
 
@@ -19,18 +19,18 @@ Get a list of tires with a number of matching model modifications
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import ws_api_client
+from ws_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: user_key
-configuration = swagger_client.Configuration()
+configuration = ws_api_client.Configuration()
 configuration.api_key['user_key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['user_key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.TiresApi(swagger_client.ApiClient(configuration))
+api_instance = ws_api_client.TiresApi(ws_api_client.ApiClient(configuration))
 width = 8.14 # float | Tire width, mm (e.g. `195`) (optional)
 width_min = 8.14 # float | Lower bound for tire width, mm (e.g. `165`) (optional)
 width_max = 8.14 # float | Upper bound for tire width, mm (e.g. `200`) (optional)
@@ -97,19 +97,19 @@ Get a list of model modifications by tire
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import ws_api_client
+from ws_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: user_key
-configuration = swagger_client.Configuration()
+configuration = ws_api_client.Configuration()
 configuration.api_key['user_key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['user_key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.TiresApi(swagger_client.ApiClient(configuration))
-tire = 'tire_example' # str | Formatted tire size. Use _**`GET /tires/`**_ to get possible values (e.g. `195/50R15`)
+api_instance = ws_api_client.TiresApi(ws_api_client.ApiClient(configuration))
+tire = '\"195/50R15\"' # str | Formatted tire size. Use _**`GET /tires/`**_ to get possible values (e.g. `195/50R15`)
 width = 8.14 # float | Tire width, mm (e.g. `195`) (optional)
 width_min = 8.14 # float | Lower bound for tire width, mm (e.g. `165`) (optional)
 width_max = 8.14 # float | Upper bound for tire width, mm (e.g. `200`) (optional)

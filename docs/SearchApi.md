@@ -1,4 +1,4 @@
-# swagger_client.SearchApi
+# ws_api_client.SearchApi
 
 All URIs are relative to *https://api.wheel-size.com/v1*
 
@@ -21,21 +21,21 @@ Get a list of model modifications that match the given tire size in high flotati
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import ws_api_client
+from ws_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: user_key
-configuration = swagger_client.Configuration()
+configuration = ws_api_client.Configuration()
 configuration.api_key['user_key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['user_key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.SearchApi(swagger_client.ApiClient(configuration))
-tire_diameter = 8.14 # float | Tire diameter, in (e.g. `31`)
-tire_section_width = 8.14 # float | Tire section width, in (e.g. `10.5`)
-rim_diameter_hf = 8.14 # float | Rim diameter, in (e.g. `15`)
+api_instance = ws_api_client.SearchApi(ws_api_client.ApiClient(configuration))
+tire_diameter = 31 # float | Tire diameter, in (e.g. `31`)
+tire_section_width = 10.5 # float | Tire section width, in (e.g. `10.5`)
+rim_diameter_hf = 15 # float | Rim diameter, in (e.g. `15`)
 lang = 'lang_example' # str | Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn`. Currently translation works for chinese `zh-cn` language only (optional)
 brands = 'brands_example' # str | Show information only for specified manufacturers. Use _**`GET /makes/`**_ method to get the full list. (e.g. `mitsubishi,nissan,toyota`) (optional)
 brands_exclude = 'brands_exclude_example' # str | Don't show information for specified manufacturers. Use _**`GET /makes/`**_ method to get the full list. (e.g. `geely,great-wall`) (optional)
@@ -89,21 +89,21 @@ Find OE and option fitments that match the given manufacturer, model, year and t
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import ws_api_client
+from ws_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: user_key
-configuration = swagger_client.Configuration()
+configuration = ws_api_client.Configuration()
 configuration.api_key['user_key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['user_key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.SearchApi(swagger_client.ApiClient(configuration))
-make = 'make_example' # str | Manufacturer slug name, use _**`GET /makes/`**_ to get possible values (e.g. `mitsubishi`)
-model = 'model_example' # str | Model slug name, use _**`GET /models/`**_ to get possible values (e.g. `outlander`)
-year = 56 # int | You can use _**`GET /years/`**_ to get possible years (e.g. `2015`)
+api_instance = ws_api_client.SearchApi(ws_api_client.ApiClient(configuration))
+make = '\"mitsubishi\"' # str | Manufacturer slug name, use _**`GET /makes/`**_ to get possible values (e.g. `mitsubishi`)
+model = '\"outlander\"' # str | Model slug name, use _**`GET /models/`**_ to get possible values (e.g. `outlander`)
+year = 2015 # int | You can use _**`GET /years/`**_ to get possible years (e.g. `2015`)
 trim = 'trim_example' # str | Use *`slug`* from _**`GET /trims/`**_ methods here. (e.g. `2.0+GG2W`) (optional)
 only_oem = true # bool | Show only original equipment wheels (optional)
 lang = 'lang_example' # str | Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn`. Currently translation works for chinese `zh-cn` language only (optional)
@@ -153,21 +153,21 @@ Get a list of model modifications that match the given rim parameters, grouped b
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import ws_api_client
+from ws_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: user_key
-configuration = swagger_client.Configuration()
+configuration = ws_api_client.Configuration()
 configuration.api_key['user_key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['user_key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.SearchApi(swagger_client.ApiClient(configuration))
-bolt_pattern = 'bolt_pattern_example' # str | Bolt pattern combines number of stud holes and pitch circle diameter. Use _**`GET /bolt-patterns/`**_ to get possible values (e.g. `5x105`)
-rim_diameter = 8.14 # float | Rim diameter, in (e.g. `16`)
-rim_width = 8.14 # float | Rim width, in (e.g. `7`)
+api_instance = ws_api_client.SearchApi(ws_api_client.ApiClient(configuration))
+bolt_pattern = '\"5x105\"' # str | Bolt pattern combines number of stud holes and pitch circle diameter. Use _**`GET /bolt-patterns/`**_ to get possible values (e.g. `5x105`)
+rim_diameter = 16 # float | Rim diameter, in (e.g. `16`)
+rim_width = 7 # float | Rim width, in (e.g. `7`)
 offset = 8.14 # float | Rim offset, mm (e.g. `40`) (optional)
 offset_min = 8.14 # float | Lower bound for rim offset, mm (e.g. `35`) (optional)
 offset_max = 8.14 # float | Upper bound for rim offset, mm (e.g. `45`) (optional)
@@ -233,21 +233,21 @@ Get a list of model modifications matching given tire, grouped by manufacturer. 
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import ws_api_client
+from ws_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: user_key
-configuration = swagger_client.Configuration()
+configuration = ws_api_client.Configuration()
 configuration.api_key['user_key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['user_key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.SearchApi(swagger_client.ApiClient(configuration))
-tire_width = 8.14 # float | Tire width, mm (e.g. `195`)
-aspect_ratio = 8.14 # float | Aspect ratio, % (e.g. `50`)
-rim_diameter = 8.14 # float | Rim diameter, in (e.g. `16`)
+api_instance = ws_api_client.SearchApi(ws_api_client.ApiClient(configuration))
+tire_width = 195 # float | Tire width, mm (e.g. `195`)
+aspect_ratio = 50 # float | Aspect ratio, % (e.g. `50`)
+rim_diameter = 16 # float | Rim diameter, in (e.g. `16`)
 lang = 'lang_example' # str | Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn`. Currently translation works for chinese `zh-cn` language only (optional)
 brands = 'brands_example' # str | Show information only for specified manufacturers. Use _**`GET /makes/`**_ method to get the full list. (e.g. `mitsubishi,nissan,toyota`) (optional)
 brands_exclude = 'brands_exclude_example' # str | Don't show information for specified manufacturers. Use _**`GET /makes/`**_ method to get the full list. (e.g. `geely,great-wall`) (optional)

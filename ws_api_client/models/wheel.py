@@ -16,7 +16,7 @@ import re  # noqa: F401
 
 import six
 
-from swagger_client.models.pressure import Pressure  # noqa: F401,E501
+from ws_api_client.models.pressure import Pressure  # noqa: F401,E501
 
 
 class Wheel(object):

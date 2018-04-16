@@ -16,9 +16,9 @@ import re  # noqa: F401
 
 import six
 
-from swagger_client.models.body import Body  # noqa: F401,E501
-from swagger_client.models.make_model import MakeModel  # noqa: F401,E501
-from swagger_client.models.model import Model  # noqa: F401,E501
+from ws_api_client.models.body import Body  # noqa: F401,E501
+from ws_api_client.models.make_model import MakeModel  # noqa: F401,E501
+from ws_api_client.models.model import Model  # noqa: F401,E501
 
 
 class Generation(object):

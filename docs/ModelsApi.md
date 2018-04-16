@@ -1,4 +1,4 @@
-# swagger_client.ModelsApi
+# ws_api_client.ModelsApi
 
 All URIs are relative to *https://api.wheel-size.com/v1*
 
@@ -20,19 +20,19 @@ Get a list of models that match given manufacturer and year (if present)
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import ws_api_client
+from ws_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: user_key
-configuration = swagger_client.Configuration()
+configuration = ws_api_client.Configuration()
 configuration.api_key['user_key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['user_key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ModelsApi(swagger_client.ApiClient(configuration))
-make = 'make_example' # str | Manufacturer slug name, use _**`GET /makes/`**_ to get possible values (e.g. `mitsubishi`)
+api_instance = ws_api_client.ModelsApi(ws_api_client.ApiClient(configuration))
+make = '\"mitsubishi\"' # str | Manufacturer slug name, use _**`GET /makes/`**_ to get possible values (e.g. `mitsubishi`)
 year = 56 # int | You can use _**`GET /years/`**_ to get possible years (e.g. `2015`) (optional)
 lang = 'lang_example' # str | Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn`. Currently translation works for chinese `zh-cn` language only (optional)
 
@@ -78,20 +78,20 @@ Get the detailed information about model series
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import ws_api_client
+from ws_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: user_key
-configuration = swagger_client.Configuration()
+configuration = ws_api_client.Configuration()
 configuration.api_key['user_key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['user_key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ModelsApi(swagger_client.ApiClient(configuration))
-make = 'make_example' # str | Manufacturer slug name, use _**`GET /makes/`**_ to get possible values (e.g. `mitsubishi`)
-slug = 'slug_example' # str | Model slug name, use _**`GET /models/`**_ to get possible values (e.g. `outlander`)
+api_instance = ws_api_client.ModelsApi(ws_api_client.ApiClient(configuration))
+make = '\"mitsubishi\"' # str | Manufacturer slug name, use _**`GET /makes/`**_ to get possible values (e.g. `mitsubishi`)
+slug = '\"outlander\"' # str | Model slug name, use _**`GET /models/`**_ to get possible values (e.g. `outlander`)
 lang = 'lang_example' # str | Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn`. Currently translation works for chinese `zh-cn` language only (optional)
 
 try:
@@ -136,21 +136,21 @@ Get more info about model/year
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import ws_api_client
+from ws_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: user_key
-configuration = swagger_client.Configuration()
+configuration = ws_api_client.Configuration()
 configuration.api_key['user_key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['user_key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.ModelsApi(swagger_client.ApiClient(configuration))
-make = 'make_example' # str | Manufacturer slug name, use _**`GET /makes/`**_ to get possible values (e.g. `mitsubishi`)
-slug = 'slug_example' # str | Model slug name, use _**`GET /models/`**_ to get possible values (e.g. `outlander`)
-year = 56 # int | You can use _**`GET /years/`**_ to get possible years (e.g. `2015`)
+api_instance = ws_api_client.ModelsApi(ws_api_client.ApiClient(configuration))
+make = '\"mitsubishi\"' # str | Manufacturer slug name, use _**`GET /makes/`**_ to get possible values (e.g. `mitsubishi`)
+slug = '\"outlander\"' # str | Model slug name, use _**`GET /models/`**_ to get possible values (e.g. `outlander`)
+year = 2015 # int | You can use _**`GET /years/`**_ to get possible years (e.g. `2015`)
 lang = 'lang_example' # str | Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn`. Currently translation works for chinese `zh-cn` language only (optional)
 
 try:

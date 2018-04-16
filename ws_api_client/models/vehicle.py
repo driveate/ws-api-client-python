@@ -16,10 +16,10 @@ import re  # noqa: F401
 
 import six
 
-from swagger_client.models.generation import Generation  # noqa: F401,E501
-from swagger_client.models.market import Market  # noqa: F401,E501
-from swagger_client.models.power import Power  # noqa: F401,E501
-from swagger_client.models.wheel_pair import WheelPair  # noqa: F401,E501
+from ws_api_client.models.generation import Generation  # noqa: F401,E501
+from ws_api_client.models.market import Market  # noqa: F401,E501
+from ws_api_client.models.power import Power  # noqa: F401,E501
+from ws_api_client.models.wheel_pair import WheelPair  # noqa: F401,E501
 
 
 class Vehicle(object):
@@ -323,7 +323,7 @@ class Vehicle(object):
         """
         if lock_text is None:
             raise ValueError("Invalid value for `lock_text`, must not be `None`")  # noqa: E501
-        allowed_values = ["M10 x 1.25", "M12 x 1.25", "M12 x 1.5", "M12 x 1.75", "M14 x 1.25", "M14 x 1.5", "M14 x 2.0", "M16 x 1.5", "3/8" - 24 UNF", "7/16" - 20 UNF", "1/2" - 20 UNF", "9/16" - 18 UNF"]  # noqa: E501
+        allowed_values = ["M10 x 1.25", "M12 x 1.25", "M12 x 1.5", "M12 x 1.75", "M14 x 1.25", "M14 x 1.5", "M14 x 2.0", "M16 x 1.5", "3/8\" - 24 UNF", "7/16\" - 20 UNF", "1/2\" - 20 UNF", "9/16\" - 18 UNF"]  # noqa: E501
         if lock_text not in allowed_values:
             raise ValueError(
                 "Invalid value for `lock_text` ({0}), must be one of {1}"  # noqa: E501

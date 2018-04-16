@@ -1,4 +1,4 @@
-# swagger_client.BoltPatternsApi
+# ws_api_client.BoltPatternsApi
 
 All URIs are relative to *https://api.wheel-size.com/v1*
 
@@ -19,18 +19,18 @@ A list of possible bolt patterns with the number of matching model modifications
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import ws_api_client
+from ws_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: user_key
-configuration = swagger_client.Configuration()
+configuration = ws_api_client.Configuration()
 configuration.api_key['user_key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['user_key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.BoltPatternsApi(swagger_client.ApiClient(configuration))
+api_instance = ws_api_client.BoltPatternsApi(ws_api_client.ApiClient(configuration))
 stud = 8.14 # float | Number of stud holes (e.g. `5`) (optional)
 stud_min = 8.14 # float | Lower bound for number of stud holes (e.g. `4`) (optional)
 stud_max = 8.14 # float | Upper bound for number of stud holes (e.g. `7`) (optional)
@@ -91,19 +91,19 @@ Get a list of model modifications matching to the given bolt pattern
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import ws_api_client
+from ws_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: user_key
-configuration = swagger_client.Configuration()
+configuration = ws_api_client.Configuration()
 configuration.api_key['user_key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['user_key'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.BoltPatternsApi(swagger_client.ApiClient(configuration))
-bolt_pattern = 'bolt_pattern_example' # str | Bolt pattern combines number of stud holes and pitch circle diameter. Use _**`GET /bolt-patterns/`**_ to get possible values (e.g. `5x105`)
+api_instance = ws_api_client.BoltPatternsApi(ws_api_client.ApiClient(configuration))
+bolt_pattern = '\"5x105\"' # str | Bolt pattern combines number of stud holes and pitch circle diameter. Use _**`GET /bolt-patterns/`**_ to get possible values (e.g. `5x105`)
 rim_diameter = 8.14 # float | Rim diameter, in (e.g. `16`) (optional)
 rim_width = 8.14 # float | Rim width, in (e.g. `7`) (optional)
 offset = 8.14 # float | Rim offset, mm (e.g. `40`) (optional)

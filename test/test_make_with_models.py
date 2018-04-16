@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.make_with_models import MakeWithModels  # noqa: E501
-from swagger_client.rest import ApiException
+import ws_api_client
+from ws_api_client.models.make_with_models import MakeWithModels  # noqa: E501
+from ws_api_client.rest import ApiException
 
 
 class TestMakeWithModels(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestMakeWithModels(unittest.TestCase):
     def testMakeWithModels(self):
         """Test MakeWithModels"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.make_with_models.MakeWithModels()  # noqa: E501
+        # model = ws_api_client.models.make_with_models.MakeWithModels()  # noqa: E501
         pass
 
 
