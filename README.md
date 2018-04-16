@@ -52,7 +52,7 @@ from ws_api_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: user_key
-ws_api_client.configuration.api_key['user_key'] = 'YOUR_API_KEY'
+ws_api_client.configuration.default_config.api_key['user_key'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # ws_api_client.configuration.api_key_prefix['user_key'] = 'Bearer'
 # create an instance of the API class

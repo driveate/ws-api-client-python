@@ -23,7 +23,7 @@ import tempfile
 import six
 from six.moves.urllib.parse import quote
 
-from ws_api_client.configuration import Configuration
+from ws_api_client.configuration import default_config
 import ws_api_client.models
 from ws_api_client import rest
 
@@ -63,7 +63,7 @@ class ApiClient(object):
     def __init__(self, configuration=None, header_name=None, header_value=None,
                  cookie=None):
         if configuration is None:
-            configuration = Configuration()
+            configuration = default_config
         self.configuration = configuration
 
         self.pool = ThreadPool()
