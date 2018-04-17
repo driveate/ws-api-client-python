@@ -17,7 +17,7 @@ import re  # noqa: F401
 import six
 
 from ws_api_client.models.generation import Generation  # noqa: F401,E501
-from ws_api_client.models.make_model import MakeModel  # noqa: F401,E501
+from ws_api_client.models.make import Make  # noqa: F401,E501
 from ws_api_client.models.model import Model  # noqa: F401,E501
 from ws_api_client.models.rim_agregation import RimAgregation  # noqa: F401,E501
 from ws_api_client.models.tires_aggregation import TiresAggregation  # noqa: F401,E501
@@ -37,7 +37,7 @@ class ModelWithTires(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'make': 'MakeModel',
+        'make': 'Make',
         'model': 'Model',
         'year': 'int',
         'years': 'list[int]',
@@ -85,7 +85,7 @@ class ModelWithTires(object):
 
 
         :return: The make of this ModelWithTires.  # noqa: E501
-        :rtype: MakeModel
+        :rtype: Make
         """
         return self._make
 
@@ -95,7 +95,7 @@ class ModelWithTires(object):
 
 
         :param make: The make of this ModelWithTires.  # noqa: E501
-        :type: MakeModel
+        :type: Make
         """
         if make is None:
             raise ValueError("Invalid value for `make`, must not be `None`")  # noqa: E501

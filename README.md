@@ -96,7 +96,7 @@ Class | Method | HTTP request | Description
  - [BoltPattern](docs/BoltPattern.md)
  - [Country](docs/Country.md)
  - [Generation](docs/Generation.md)
- - [MakeModel](docs/MakeModel.md)
+ - [Make](docs/Make.md)
  - [MakeWithModels](docs/MakeWithModels.md)
  - [Market](docs/Market.md)
  - [Model](docs/Model.md)

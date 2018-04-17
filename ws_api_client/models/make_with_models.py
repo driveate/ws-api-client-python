@@ -16,7 +16,7 @@ import re  # noqa: F401
 
 import six
 
-from ws_api_client.models.make_model import MakeModel  # noqa: F401,E501
+from ws_api_client.models.make import Make  # noqa: F401,E501
 from ws_api_client.models.model_with_trims import ModelWithTrims  # noqa: F401,E501
 
 
@@ -34,7 +34,7 @@ class MakeWithModels(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'make': 'MakeModel',
+        'make': 'Make',
         'models': 'list[ModelWithTrims]'
     }
 
@@ -59,7 +59,7 @@ class MakeWithModels(object):
 
 
         :return: The make of this MakeWithModels.  # noqa: E501
-        :rtype: MakeModel
+        :rtype: Make
         """
         return self._make
 
@@ -69,7 +69,7 @@ class MakeWithModels(object):
 
 
         :param make: The make of this MakeWithModels.  # noqa: E501
-        :type: MakeModel
+        :type: Make
         """
         if make is None:
             raise ValueError("Invalid value for `make`, must not be `None`")  # noqa: E501

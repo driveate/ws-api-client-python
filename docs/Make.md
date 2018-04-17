@@ -1,4 +1,4 @@
-# MakeModel
+# Make
 
 ## Properties
 Name | Type | Description | Notes

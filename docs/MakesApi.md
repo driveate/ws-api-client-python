@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **makes_list**
-> list[MakeModel] makes_list(lang=lang, brands=brands, brands_exclude=brands_exclude, countries=countries, countries_exclude=countries_exclude)
+> list[Make] makes_list(lang=lang, brands=brands, brands_exclude=brands_exclude, countries=countries, countries_exclude=countries_exclude)
 
 Returns a list of manufacturers
 
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[MakeModel]**](MakeModel.md)
+[**list[Make]**](Make.md)
 
 ### Authorization
 

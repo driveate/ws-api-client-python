@@ -48,7 +48,7 @@ class MakesApi(object):
         :param str brands_exclude: Don't show information for specified manufacturers. Use _**`GET /makes/`**_ method to get the full list. (e.g. `geely,great-wall`)
         :param str countries: Show information for local manufacturers from specified countries only. Use _**`GET /countries/`**_ method to get the full list of countries. (e.g. `us,gb,jp`)
         :param str countries_exclude: Don't show information for local manufacturers from specified countries. Use _**`GET /countries/`**_ method to get the full list of countries. (e.g. `ru,ua`)
-        :return: list[MakeModel]
+        :return: list[Make]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -74,7 +74,7 @@ class MakesApi(object):
         :param str brands_exclude: Don't show information for specified manufacturers. Use _**`GET /makes/`**_ method to get the full list. (e.g. `geely,great-wall`)
         :param str countries: Show information for local manufacturers from specified countries only. Use _**`GET /countries/`**_ method to get the full list of countries. (e.g. `us,gb,jp`)
         :param str countries_exclude: Don't show information for local manufacturers from specified countries. Use _**`GET /countries/`**_ method to get the full list of countries. (e.g. `ru,ua`)
-        :return: list[MakeModel]
+        :return: list[Make]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -132,7 +132,7 @@ class MakesApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[MakeModel]',  # noqa: E501
+            response_type='list[Make]',  # noqa: E501
             auth_settings=auth_settings,
             async=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),

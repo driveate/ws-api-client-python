@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import ws_api_client
-from ws_api_client.models.make_model import MakeModel  # noqa: E501
+from ws_api_client.models.make import Make  # noqa: E501
 from ws_api_client.rest import ApiException
 
 
-class TestMakeModel(unittest.TestCase):
-    """MakeModel unit test stubs"""
+class TestMake(unittest.TestCase):
+    """Make unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestMakeModel(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testMakeModel(self):
-        """Test MakeModel"""
+    def testMake(self):
+        """Test Make"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = ws_api_client.models.make_model.MakeModel()  # noqa: E501
+        # model = ws_api_client.models.make.Make()  # noqa: E501
         pass
 
 
