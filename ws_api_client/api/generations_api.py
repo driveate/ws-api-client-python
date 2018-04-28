@@ -47,7 +47,7 @@ class GenerationsApi(object):
         :param str model: Model slug name, use _**`GET /models/`**_ to get possible values (e.g. `outlander`) (required)
         :param int year: You can use _**`GET /years/`**_ to get possible years (e.g. `2015`)
         :param str lang: Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn`. Currently translation works for chinese `zh-cn` language only
-        :return: list[Generation]
+        :return: list[GenerationWithMakeAndModel]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -72,7 +72,7 @@ class GenerationsApi(object):
         :param str model: Model slug name, use _**`GET /models/`**_ to get possible values (e.g. `outlander`) (required)
         :param int year: You can use _**`GET /years/`**_ to get possible years (e.g. `2015`)
         :param str lang: Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn`. Currently translation works for chinese `zh-cn` language only
-        :return: list[Generation]
+        :return: list[GenerationWithMakeAndModel]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -136,7 +136,7 @@ class GenerationsApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Generation]',  # noqa: E501
+            response_type='list[GenerationWithMakeAndModel]',  # noqa: E501
             auth_settings=auth_settings,
             async=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),

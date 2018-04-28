@@ -37,6 +37,7 @@ from ws_api_client.models.body import Body
 from ws_api_client.models.bolt_pattern import BoltPattern
 from ws_api_client.models.country import Country
 from ws_api_client.models.generation import Generation
+from ws_api_client.models.generation_with_make_and_model import GenerationWithMakeAndModel
 from ws_api_client.models.make import Make
 from ws_api_client.models.make_with_models import MakeWithModels
 from ws_api_client.models.market import Market

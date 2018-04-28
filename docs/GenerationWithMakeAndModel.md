@@ -1,8 +1,10 @@
-# Generation
+# GenerationWithMakeAndModel
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**make** | [**Make**](Make.md) |  | 
+**model** | [**Model**](Model.md) |  | 
 **name** | **str** | Generation name (e.g. &#x60;III Restyling&#x60;) | 
 **bodies** | [**list[Body]**](Body.md) |  | 
 **start_year** | **int** | Generation start year | [optional] 

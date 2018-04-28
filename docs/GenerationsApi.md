@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **generations_list**
-> list[Generation] generations_list(make, model, year=year, lang=lang)
+> list[GenerationWithMakeAndModel] generations_list(make, model, year=year, lang=lang)
 
 Generations for the given model
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Generation]**](Generation.md)
+[**list[GenerationWithMakeAndModel]**](GenerationWithMakeAndModel.md)
 
 ### Authorization
 
