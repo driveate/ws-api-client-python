@@ -31,8 +31,8 @@ class SizeAggregation(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'min': 'float',
-        'max': 'float'
+        'min': 'str',
+        'max': 'str'
     }
 
     attribute_map = {
@@ -57,7 +57,7 @@ class SizeAggregation(object):
         Size combined from minimum *`width`*, *`aspect_ratio`* and *`diameter`*  # noqa: E501
 
         :return: The min of this SizeAggregation.  # noqa: E501
-        :rtype: float
+        :rtype: str
         """
         return self._min
 
@@ -68,7 +68,7 @@ class SizeAggregation(object):
         Size combined from minimum *`width`*, *`aspect_ratio`* and *`diameter`*  # noqa: E501
 
         :param min: The min of this SizeAggregation.  # noqa: E501
-        :type: float
+        :type: str
         """
         if min is None:
             raise ValueError("Invalid value for `min`, must not be `None`")  # noqa: E501
@@ -82,7 +82,7 @@ class SizeAggregation(object):
         Size combined from maximum *`width`*, *`aspect_ratio`* and *`diameter`*  # noqa: E501
 
         :return: The max of this SizeAggregation.  # noqa: E501
-        :rtype: float
+        :rtype: str
         """
         return self._max
 
@@ -93,7 +93,7 @@ class SizeAggregation(object):
         Size combined from maximum *`width`*, *`aspect_ratio`* and *`diameter`*  # noqa: E501
 
         :param max: The max of this SizeAggregation.  # noqa: E501
-        :type: float
+        :type: str
         """
         if max is None:
             raise ValueError("Invalid value for `max`, must not be `None`")  # noqa: E501
