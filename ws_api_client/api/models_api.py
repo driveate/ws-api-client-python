@@ -45,7 +45,7 @@ class ModelsApi(object):
         :param async bool
         :param str make: Manufacturer slug name, use _**`GET /makes/`**_ to get possible values (e.g. `mitsubishi`) (required)
         :param int year: You can use _**`GET /years/`**_ to get possible years (e.g. `2015`)
-        :param str lang: Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn`. Currently translation works for chinese `zh-cn` language only
+        :param str lang: Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn,zh-tw`. Currently translation works for chinese `zh-cn` language only
         :return: list[Model]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -69,7 +69,7 @@ class ModelsApi(object):
         :param async bool
         :param str make: Manufacturer slug name, use _**`GET /makes/`**_ to get possible values (e.g. `mitsubishi`) (required)
         :param int year: You can use _**`GET /years/`**_ to get possible years (e.g. `2015`)
-        :param str lang: Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn`. Currently translation works for chinese `zh-cn` language only
+        :param str lang: Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn,zh-tw`. Currently translation works for chinese `zh-cn` language only
         :return: list[Model]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -148,7 +148,7 @@ class ModelsApi(object):
         :param async bool
         :param str make: Manufacturer slug name, use _**`GET /makes/`**_ to get possible values (e.g. `mitsubishi`) (required)
         :param str slug: Model slug name, use _**`GET /models/`**_ to get possible values (e.g. `outlander`) (required)
-        :param str lang: Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn`. Currently translation works for chinese `zh-cn` language only
+        :param str lang: Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn,zh-tw`. Currently translation works for chinese `zh-cn` language only
         :return: ModelWithTires
                  If the method is called asynchronously,
                  returns the request thread.
@@ -172,7 +172,7 @@ class ModelsApi(object):
         :param async bool
         :param str make: Manufacturer slug name, use _**`GET /makes/`**_ to get possible values (e.g. `mitsubishi`) (required)
         :param str slug: Model slug name, use _**`GET /models/`**_ to get possible values (e.g. `outlander`) (required)
-        :param str lang: Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn`. Currently translation works for chinese `zh-cn` language only
+        :param str lang: Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn,zh-tw`. Currently translation works for chinese `zh-cn` language only
         :return: ModelWithTires
                  If the method is called asynchronously,
                  returns the request thread.
@@ -256,7 +256,7 @@ class ModelsApi(object):
         :param str make: Manufacturer slug name, use _**`GET /makes/`**_ to get possible values (e.g. `mitsubishi`) (required)
         :param str slug: Model slug name, use _**`GET /models/`**_ to get possible values (e.g. `outlander`) (required)
         :param int year: You can use _**`GET /years/`**_ to get possible years (e.g. `2015`) (required)
-        :param str lang: Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn`. Currently translation works for chinese `zh-cn` language only
+        :param str lang: Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn,zh-tw`. Currently translation works for chinese `zh-cn` language only
         :return: ModelWithTires
                  If the method is called asynchronously,
                  returns the request thread.
@@ -281,7 +281,7 @@ class ModelsApi(object):
         :param str make: Manufacturer slug name, use _**`GET /makes/`**_ to get possible values (e.g. `mitsubishi`) (required)
         :param str slug: Model slug name, use _**`GET /models/`**_ to get possible values (e.g. `outlander`) (required)
         :param int year: You can use _**`GET /years/`**_ to get possible years (e.g. `2015`) (required)
-        :param str lang: Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn`. Currently translation works for chinese `zh-cn` language only
+        :param str lang: Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn,zh-tw`. Currently translation works for chinese `zh-cn` language only
         :return: ModelWithTires
                  If the method is called asynchronously,
                  returns the request thread.

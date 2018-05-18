@@ -32,37 +32,24 @@ class Trim(object):
     """
     swagger_types = {
         'slug': 'str',
-        'name': 'str',
-        'trim': 'str',
-        'body': 'str',
-        'generation': 'str'
+        'name': 'str'
     }
 
     attribute_map = {
         'slug': 'slug',
-        'name': 'name',
-        'trim': 'trim',
-        'body': 'body',
-        'generation': 'generation'
+        'name': 'name'
     }
 
-    def __init__(self, slug=None, name=None, trim=None, body=None, generation=None):  # noqa: E501
+    def __init__(self, slug=None, name=None):  # noqa: E501
         """Trim - a model defined in Swagger"""  # noqa: E501
 
         self._slug = None
         self._name = None
-        self._trim = None
-        self._body = None
-        self._generation = None
         self.discriminator = None
 
         if slug is not None:
             self.slug = slug
         self.name = name
-        self.trim = trim
-        self.body = body
-        if generation is not None:
-            self.generation = generation
 
     @property
     def slug(self):
@@ -111,79 +98,6 @@ class Trim(object):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
-
-    @property
-    def trim(self):
-        """Gets the trim of this Trim.  # noqa: E501
-
-        Trim name. It can be empty for models created for JDM market (e.g. `2.0`, can be __*`null`*__)  # noqa: E501
-
-        :return: The trim of this Trim.  # noqa: E501
-        :rtype: str
-        """
-        return self._trim
-
-    @trim.setter
-    def trim(self, trim):
-        """Sets the trim of this Trim.
-
-        Trim name. It can be empty for models created for JDM market (e.g. `2.0`, can be __*`null`*__)  # noqa: E501
-
-        :param trim: The trim of this Trim.  # noqa: E501
-        :type: str
-        """
-        if trim is None:
-            raise ValueError("Invalid value for `trim`, must not be `None`")  # noqa: E501
-
-        self._trim = trim
-
-    @property
-    def body(self):
-        """Gets the body of this Trim.  # noqa: E501
-
-        Body name. Used extensively for JDM market (e.g. `GG2W`, can be __*`null`*__)  # noqa: E501
-
-        :return: The body of this Trim.  # noqa: E501
-        :rtype: str
-        """
-        return self._body
-
-    @body.setter
-    def body(self, body):
-        """Sets the body of this Trim.
-
-        Body name. Used extensively for JDM market (e.g. `GG2W`, can be __*`null`*__)  # noqa: E501
-
-        :param body: The body of this Trim.  # noqa: E501
-        :type: str
-        """
-        if body is None:
-            raise ValueError("Invalid value for `body`, must not be `None`")  # noqa: E501
-
-        self._body = body
-
-    @property
-    def generation(self):
-        """Gets the generation of this Trim.  # noqa: E501
-
-        Generation name (e.g. `III Restyling`, can be __*`null`*__)  # noqa: E501
-
-        :return: The generation of this Trim.  # noqa: E501
-        :rtype: str
-        """
-        return self._generation
-
-    @generation.setter
-    def generation(self, generation):
-        """Sets the generation of this Trim.
-
-        Generation name (e.g. `III Restyling`, can be __*`null`*__)  # noqa: E501
-
-        :param generation: The generation of this Trim.  # noqa: E501
-        :type: str
-        """
-
-        self._generation = generation
 
     def to_dict(self):
         """Returns the model properties as a dict"""

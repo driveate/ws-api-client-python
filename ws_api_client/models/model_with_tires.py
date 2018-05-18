@@ -39,7 +39,6 @@ class ModelWithTires(object):
     swagger_types = {
         'make': 'Make',
         'model': 'Model',
-        'year': 'int',
         'years': 'list[int]',
         'generations': 'list[Generation]',
         'tires': 'TiresAggregation',
@@ -49,19 +48,17 @@ class ModelWithTires(object):
     attribute_map = {
         'make': 'make',
         'model': 'model',
-        'year': 'year',
         'years': 'years',
         'generations': 'generations',
         'tires': 'tires',
         'rims': 'rims'
     }
 
-    def __init__(self, make=None, model=None, year=None, years=None, generations=None, tires=None, rims=None):  # noqa: E501
+    def __init__(self, make=None, model=None, years=None, generations=None, tires=None, rims=None):  # noqa: E501
         """ModelWithTires - a model defined in Swagger"""  # noqa: E501
 
         self._make = None
         self._model = None
-        self._year = None
         self._years = None
         self._generations = None
         self._tires = None
@@ -70,7 +67,6 @@ class ModelWithTires(object):
 
         self.make = make
         self.model = model
-        self.year = year
         if years is not None:
             self.years = years
         self.generations = generations
@@ -124,31 +120,6 @@ class ModelWithTires(object):
             raise ValueError("Invalid value for `model`, must not be `None`")  # noqa: E501
 
         self._model = model
-
-    @property
-    def year(self):
-        """Gets the year of this ModelWithTires.  # noqa: E501
-
-        Selected year (e.g. `2015`, can be __*`null`*__)  # noqa: E501
-
-        :return: The year of this ModelWithTires.  # noqa: E501
-        :rtype: int
-        """
-        return self._year
-
-    @year.setter
-    def year(self, year):
-        """Sets the year of this ModelWithTires.
-
-        Selected year (e.g. `2015`, can be __*`null`*__)  # noqa: E501
-
-        :param year: The year of this ModelWithTires.  # noqa: E501
-        :type: int
-        """
-        if year is None:
-            raise ValueError("Invalid value for `year`, must not be `None`")  # noqa: E501
-
-        self._year = year
 
     @property
     def years(self):

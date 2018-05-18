@@ -48,7 +48,7 @@ class VehiclesApi(object):
         :param int year: You can use _**`GET /years/`**_ to get possible years (e.g. `2015`) (required)
         :param str trim: Use *`slug`* from _**`GET /trims/`**_ methods here. (e.g. `2.0+GG2W`)
         :param bool only_oem: Show only original equipment wheels
-        :param str lang: Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn`. Currently translation works for chinese `zh-cn` language only
+        :param str lang: Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn,zh-tw`. Currently translation works for chinese `zh-cn` language only
         :return: list[Vehicle]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -75,7 +75,7 @@ class VehiclesApi(object):
         :param int year: You can use _**`GET /years/`**_ to get possible years (e.g. `2015`) (required)
         :param str trim: Use *`slug`* from _**`GET /trims/`**_ methods here. (e.g. `2.0+GG2W`)
         :param bool only_oem: Show only original equipment wheels
-        :param str lang: Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn`. Currently translation works for chinese `zh-cn` language only
+        :param str lang: Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn,zh-tw`. Currently translation works for chinese `zh-cn` language only
         :return: list[Vehicle]
                  If the method is called asynchronously,
                  returns the request thread.
