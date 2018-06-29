@@ -3,8 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**slug** | **str** | Combines trim and body name. Format: __*&#x60;trim+body&#x60;*__ if both values provided, otherwise non-empty of them. (e.g. &#x60;2.0+GG2W&#x60;) | [optional] 
-**name** | **str** | Format: __*&#x60;trim (body)&#x60;*__ if both values provided, otherwise non-empty of them. (e.g. &#x60;2.0 (GG2W)&#x60;) | 
+**slug** | **str** | Combined trim, body, and generation identifier. Non-unique through markets (e.g. &#x60;20-gg2w-iii-restyling&#x60;) | 
+**name** | **str** | Format: __*&#x60;trim (body) [generation]&#x60;*__ (e.g. &#x60;2.0 (GG2W) [III Restyling]&#x60;) | [optional] 
+**markets** | [**list[Market]**](Market.md) | List of markets where this trim if present | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
