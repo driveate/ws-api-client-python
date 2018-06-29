@@ -37,40 +37,77 @@ class Vehicle(object):
     """
     swagger_types = {
         'market': 'Market',
+        'body': 'str',
+        'trim': 'str',
+        'slug': 'str',
         'generation': 'Generation',
+        'stud_holes': 'int',
+        'pcd': 'float',
+        'centre_bore': 'float',
         'lock_type': 'str',
+        'lock_text': 'str',
         'bolt_pattern': 'str',
         'power': 'Power',
+        'engine_type': 'str',
+        'fuel': 'str',
         'wheels': 'list[WheelPair]'
     }
 
     attribute_map = {
         'market': 'market',
+        'body': 'body',
+        'trim': 'trim',
+        'slug': 'slug',
         'generation': 'generation',
+        'stud_holes': 'stud_holes',
+        'pcd': 'pcd',
+        'centre_bore': 'centre_bore',
         'lock_type': 'lock_type',
+        'lock_text': 'lock_text',
         'bolt_pattern': 'bolt_pattern',
         'power': 'power',
+        'engine_type': 'engine_type',
+        'fuel': 'fuel',
         'wheels': 'wheels'
     }
 
-    def __init__(self, market=None, generation=None, lock_type=None, bolt_pattern=None, power=None, wheels=None):  # noqa: E501
+    def __init__(self, market=None, body=None, trim=None, slug=None, generation=None, stud_holes=None, pcd=None, centre_bore=None, lock_type=None, lock_text=None, bolt_pattern=None, power=None, engine_type=None, fuel=None, wheels=None):  # noqa: E501
         """Vehicle - a model defined in Swagger"""  # noqa: E501
 
         self._market = None
+        self._body = None
+        self._trim = None
+        self._slug = None
         self._generation = None
+        self._stud_holes = None
+        self._pcd = None
+        self._centre_bore = None
         self._lock_type = None
+        self._lock_text = None
         self._bolt_pattern = None
         self._power = None
+        self._engine_type = None
+        self._fuel = None
         self._wheels = None
         self.discriminator = None
 
         self.market = market
+        self.body = body
+        self.trim = trim
+        self.slug = slug
         self.generation = generation
+        self.stud_holes = stud_holes
+        self.pcd = pcd
+        self.centre_bore = centre_bore
         if lock_type is not None:
             self.lock_type = lock_type
+        self.lock_text = lock_text
         self.bolt_pattern = bolt_pattern
         if power is not None:
             self.power = power
+        self.engine_type = engine_type
+        if fuel is not None:
+            self.fuel = fuel
         if wheels is not None:
             self.wheels = wheels
 
@@ -98,6 +135,81 @@ class Vehicle(object):
         self._market = market
 
     @property
+    def body(self):
+        """Gets the body of this Vehicle.  # noqa: E501
+
+        Body name. Used extensively for JDM market (e.g. `GG2W`, can be __*`null`*__)  # noqa: E501
+
+        :return: The body of this Vehicle.  # noqa: E501
+        :rtype: str
+        """
+        return self._body
+
+    @body.setter
+    def body(self, body):
+        """Sets the body of this Vehicle.
+
+        Body name. Used extensively for JDM market (e.g. `GG2W`, can be __*`null`*__)  # noqa: E501
+
+        :param body: The body of this Vehicle.  # noqa: E501
+        :type: str
+        """
+        if body is None:
+            raise ValueError("Invalid value for `body`, must not be `None`")  # noqa: E501
+
+        self._body = body
+
+    @property
+    def trim(self):
+        """Gets the trim of this Vehicle.  # noqa: E501
+
+        Trim name. It can be empty for models created for JDM market (e.g. `2.0`, can be __*`null`*__)  # noqa: E501
+
+        :return: The trim of this Vehicle.  # noqa: E501
+        :rtype: str
+        """
+        return self._trim
+
+    @trim.setter
+    def trim(self, trim):
+        """Sets the trim of this Vehicle.
+
+        Trim name. It can be empty for models created for JDM market (e.g. `2.0`, can be __*`null`*__)  # noqa: E501
+
+        :param trim: The trim of this Vehicle.  # noqa: E501
+        :type: str
+        """
+        if trim is None:
+            raise ValueError("Invalid value for `trim`, must not be `None`")  # noqa: E501
+
+        self._trim = trim
+
+    @property
+    def slug(self):
+        """Gets the slug of this Vehicle.  # noqa: E501
+
+        Combined trim, body, and generation identifier. Non-unique through markets (e.g. `20-gg2w-iii-restyling`)  # noqa: E501
+
+        :return: The slug of this Vehicle.  # noqa: E501
+        :rtype: str
+        """
+        return self._slug
+
+    @slug.setter
+    def slug(self, slug):
+        """Sets the slug of this Vehicle.
+
+        Combined trim, body, and generation identifier. Non-unique through markets (e.g. `20-gg2w-iii-restyling`)  # noqa: E501
+
+        :param slug: The slug of this Vehicle.  # noqa: E501
+        :type: str
+        """
+        if slug is None:
+            raise ValueError("Invalid value for `slug`, must not be `None`")  # noqa: E501
+
+        self._slug = slug
+
+    @property
     def generation(self):
         """Gets the generation of this Vehicle.  # noqa: E501
 
@@ -119,6 +231,81 @@ class Vehicle(object):
             raise ValueError("Invalid value for `generation`, must not be `None`")  # noqa: E501
 
         self._generation = generation
+
+    @property
+    def stud_holes(self):
+        """Gets the stud_holes of this Vehicle.  # noqa: E501
+
+        Number of stud holes (e.g. `5`, can be __*`null`*__)  # noqa: E501
+
+        :return: The stud_holes of this Vehicle.  # noqa: E501
+        :rtype: int
+        """
+        return self._stud_holes
+
+    @stud_holes.setter
+    def stud_holes(self, stud_holes):
+        """Sets the stud_holes of this Vehicle.
+
+        Number of stud holes (e.g. `5`, can be __*`null`*__)  # noqa: E501
+
+        :param stud_holes: The stud_holes of this Vehicle.  # noqa: E501
+        :type: int
+        """
+        if stud_holes is None:
+            raise ValueError("Invalid value for `stud_holes`, must not be `None`")  # noqa: E501
+
+        self._stud_holes = stud_holes
+
+    @property
+    def pcd(self):
+        """Gets the pcd of this Vehicle.  # noqa: E501
+
+        Pitch circle diameter, mm (e.g. `105`, can be __*`null`*__)  # noqa: E501
+
+        :return: The pcd of this Vehicle.  # noqa: E501
+        :rtype: float
+        """
+        return self._pcd
+
+    @pcd.setter
+    def pcd(self, pcd):
+        """Sets the pcd of this Vehicle.
+
+        Pitch circle diameter, mm (e.g. `105`, can be __*`null`*__)  # noqa: E501
+
+        :param pcd: The pcd of this Vehicle.  # noqa: E501
+        :type: float
+        """
+        if pcd is None:
+            raise ValueError("Invalid value for `pcd`, must not be `None`")  # noqa: E501
+
+        self._pcd = pcd
+
+    @property
+    def centre_bore(self):
+        """Gets the centre_bore of this Vehicle.  # noqa: E501
+
+        Centre bore diameter, mm (e.g. `48.1`, can be __*`null`*__)  # noqa: E501
+
+        :return: The centre_bore of this Vehicle.  # noqa: E501
+        :rtype: float
+        """
+        return self._centre_bore
+
+    @centre_bore.setter
+    def centre_bore(self, centre_bore):
+        """Sets the centre_bore of this Vehicle.
+
+        Centre bore diameter, mm (e.g. `48.1`, can be __*`null`*__)  # noqa: E501
+
+        :param centre_bore: The centre_bore of this Vehicle.  # noqa: E501
+        :type: float
+        """
+        if centre_bore is None:
+            raise ValueError("Invalid value for `centre_bore`, must not be `None`")  # noqa: E501
+
+        self._centre_bore = centre_bore
 
     @property
     def lock_type(self):
@@ -146,6 +333,31 @@ class Vehicle(object):
             )
 
         self._lock_type = lock_type
+
+    @property
+    def lock_text(self):
+        """Gets the lock_text of this Vehicle.  # noqa: E501
+
+        Lock thread size (e.g. `M12 x 1.25`, can be __*`null`*__)  # noqa: E501
+
+        :return: The lock_text of this Vehicle.  # noqa: E501
+        :rtype: str
+        """
+        return self._lock_text
+
+    @lock_text.setter
+    def lock_text(self, lock_text):
+        """Sets the lock_text of this Vehicle.
+
+        Lock thread size (e.g. `M12 x 1.25`, can be __*`null`*__)  # noqa: E501
+
+        :param lock_text: The lock_text of this Vehicle.  # noqa: E501
+        :type: str
+        """
+        if lock_text is None:
+            raise ValueError("Invalid value for `lock_text`, must not be `None`")  # noqa: E501
+
+        self._lock_text = lock_text
 
     @property
     def bolt_pattern(self):
@@ -192,6 +404,54 @@ class Vehicle(object):
         """
 
         self._power = power
+
+    @property
+    def engine_type(self):
+        """Gets the engine_type of this Vehicle.  # noqa: E501
+
+        Engine type (e.g. `V8`, can be __*`null`*__)  # noqa: E501
+
+        :return: The engine_type of this Vehicle.  # noqa: E501
+        :rtype: str
+        """
+        return self._engine_type
+
+    @engine_type.setter
+    def engine_type(self, engine_type):
+        """Sets the engine_type of this Vehicle.
+
+        Engine type (e.g. `V8`, can be __*`null`*__)  # noqa: E501
+
+        :param engine_type: The engine_type of this Vehicle.  # noqa: E501
+        :type: str
+        """
+        if engine_type is None:
+            raise ValueError("Invalid value for `engine_type`, must not be `None`")  # noqa: E501
+
+        self._engine_type = engine_type
+
+    @property
+    def fuel(self):
+        """Gets the fuel of this Vehicle.  # noqa: E501
+
+        Fuel (e.g. `Petrol`, can be __*`null`*__)  # noqa: E501
+
+        :return: The fuel of this Vehicle.  # noqa: E501
+        :rtype: str
+        """
+        return self._fuel
+
+    @fuel.setter
+    def fuel(self, fuel):
+        """Sets the fuel of this Vehicle.
+
+        Fuel (e.g. `Petrol`, can be __*`null`*__)  # noqa: E501
+
+        :param fuel: The fuel of this Vehicle.  # noqa: E501
+        :type: str
+        """
+
+        self._fuel = fuel
 
     @property
     def wheels(self):

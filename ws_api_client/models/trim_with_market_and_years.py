@@ -33,24 +33,53 @@ class TrimWithMarketAndYears(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'trim': 'str',
         'market': 'Market',
         'years': 'list[int]'
     }
 
     attribute_map = {
+        'trim': 'trim',
         'market': 'market',
         'years': 'years'
     }
 
-    def __init__(self, market=None, years=None):  # noqa: E501
+    def __init__(self, trim=None, market=None, years=None):  # noqa: E501
         """TrimWithMarketAndYears - a model defined in Swagger"""  # noqa: E501
 
+        self._trim = None
         self._market = None
         self._years = None
         self.discriminator = None
 
+        self.trim = trim
         self.market = market
         self.years = years
+
+    @property
+    def trim(self):
+        """Gets the trim of this TrimWithMarketAndYears.  # noqa: E501
+
+        Trim name (e.g. `2.0`, can be __*`null`*__)  # noqa: E501
+
+        :return: The trim of this TrimWithMarketAndYears.  # noqa: E501
+        :rtype: str
+        """
+        return self._trim
+
+    @trim.setter
+    def trim(self, trim):
+        """Sets the trim of this TrimWithMarketAndYears.
+
+        Trim name (e.g. `2.0`, can be __*`null`*__)  # noqa: E501
+
+        :param trim: The trim of this TrimWithMarketAndYears.  # noqa: E501
+        :type: str
+        """
+        if trim is None:
+            raise ValueError("Invalid value for `trim`, must not be `None`")  # noqa: E501
+
+        self._trim = trim
 
     @property
     def market(self):
