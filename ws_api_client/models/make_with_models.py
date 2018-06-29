@@ -50,8 +50,10 @@ class MakeWithModels(object):
         self._models = None
         self.discriminator = None
 
-        self.make = make
-        self.models = models
+        if make is not None:
+            self.make = make
+        if models is not None:
+            self.models = models
 
     @property
     def make(self):
@@ -71,8 +73,6 @@ class MakeWithModels(object):
         :param make: The make of this MakeWithModels.  # noqa: E501
         :type: Make
         """
-        if make is None:
-            raise ValueError("Invalid value for `make`, must not be `None`")  # noqa: E501
 
         self._make = make
 
@@ -94,8 +94,6 @@ class MakeWithModels(object):
         :param models: The models of this MakeWithModels.  # noqa: E501
         :type: list[ModelWithTrims]
         """
-        if models is None:
-            raise ValueError("Invalid value for `models`, must not be `None`")  # noqa: E501
 
         self._models = models
 

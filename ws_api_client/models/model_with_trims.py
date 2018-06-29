@@ -58,11 +58,16 @@ class ModelWithTrims(object):
         self._vehicles = None
         self.discriminator = None
 
-        self.slug = slug
-        self.name = name
-        self.start_year = start_year
-        self.end_year = end_year
-        self.vehicles = vehicles
+        if slug is not None:
+            self.slug = slug
+        if name is not None:
+            self.name = name
+        if start_year is not None:
+            self.start_year = start_year
+        if end_year is not None:
+            self.end_year = end_year
+        if vehicles is not None:
+            self.vehicles = vehicles
 
     @property
     def slug(self):
@@ -84,8 +89,6 @@ class ModelWithTrims(object):
         :param slug: The slug of this ModelWithTrims.  # noqa: E501
         :type: str
         """
-        if slug is None:
-            raise ValueError("Invalid value for `slug`, must not be `None`")  # noqa: E501
 
         self._slug = slug
 
@@ -109,8 +112,6 @@ class ModelWithTrims(object):
         :param name: The name of this ModelWithTrims.  # noqa: E501
         :type: str
         """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 
@@ -134,8 +135,6 @@ class ModelWithTrims(object):
         :param start_year: The start_year of this ModelWithTrims.  # noqa: E501
         :type: str
         """
-        if start_year is None:
-            raise ValueError("Invalid value for `start_year`, must not be `None`")  # noqa: E501
 
         self._start_year = start_year
 
@@ -159,8 +158,6 @@ class ModelWithTrims(object):
         :param end_year: The end_year of this ModelWithTrims.  # noqa: E501
         :type: str
         """
-        if end_year is None:
-            raise ValueError("Invalid value for `end_year`, must not be `None`")  # noqa: E501
 
         self._end_year = end_year
 
@@ -182,8 +179,6 @@ class ModelWithTrims(object):
         :param vehicles: The vehicles of this ModelWithTrims.  # noqa: E501
         :type: list[TrimWithMarketAndYears]
         """
-        if vehicles is None:
-            raise ValueError("Invalid value for `vehicles`, must not be `None`")  # noqa: E501
 
         self._vehicles = vehicles
 

@@ -52,9 +52,12 @@ class TrimWithMarketAndYears(object):
         self._years = None
         self.discriminator = None
 
-        self.trim = trim
-        self.market = market
-        self.years = years
+        if trim is not None:
+            self.trim = trim
+        if market is not None:
+            self.market = market
+        if years is not None:
+            self.years = years
 
     @property
     def trim(self):
@@ -76,8 +79,6 @@ class TrimWithMarketAndYears(object):
         :param trim: The trim of this TrimWithMarketAndYears.  # noqa: E501
         :type: str
         """
-        if trim is None:
-            raise ValueError("Invalid value for `trim`, must not be `None`")  # noqa: E501
 
         self._trim = trim
 
@@ -99,8 +100,6 @@ class TrimWithMarketAndYears(object):
         :param market: The market of this TrimWithMarketAndYears.  # noqa: E501
         :type: Market
         """
-        if market is None:
-            raise ValueError("Invalid value for `market`, must not be `None`")  # noqa: E501
 
         self._market = market
 
@@ -124,8 +123,6 @@ class TrimWithMarketAndYears(object):
         :param years: The years of this TrimWithMarketAndYears.  # noqa: E501
         :type: list[int]
         """
-        if years is None:
-            raise ValueError("Invalid value for `years`, must not be `None`")  # noqa: E501
 
         self._years = years
 

@@ -55,9 +55,12 @@ class BoltPattern(object):
 
         if pattern is not None:
             self.pattern = pattern
-        self.stud = stud
-        self.pcd = pcd
-        self.count = count
+        if stud is not None:
+            self.stud = stud
+        if pcd is not None:
+            self.pcd = pcd
+        if count is not None:
+            self.count = count
 
     @property
     def pattern(self):
@@ -102,8 +105,6 @@ class BoltPattern(object):
         :param stud: The stud of this BoltPattern.  # noqa: E501
         :type: int
         """
-        if stud is None:
-            raise ValueError("Invalid value for `stud`, must not be `None`")  # noqa: E501
 
         self._stud = stud
 
@@ -127,8 +128,6 @@ class BoltPattern(object):
         :param pcd: The pcd of this BoltPattern.  # noqa: E501
         :type: float
         """
-        if pcd is None:
-            raise ValueError("Invalid value for `pcd`, must not be `None`")  # noqa: E501
 
         self._pcd = pcd
 
@@ -152,8 +151,6 @@ class BoltPattern(object):
         :param count: The count of this BoltPattern.  # noqa: E501
         :type: int
         """
-        if count is None:
-            raise ValueError("Invalid value for `count`, must not be `None`")  # noqa: E501
 
         self._count = count
 

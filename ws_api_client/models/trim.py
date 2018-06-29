@@ -67,15 +67,20 @@ class Trim(object):
         self._markets = None
         self.discriminator = None
 
-        self.slug = slug
+        if slug is not None:
+            self.slug = slug
         if name is not None:
             self.name = name
-        self.trim = trim
-        self.body = body
+        if trim is not None:
+            self.trim = trim
+        if body is not None:
+            self.body = body
         if generation is not None:
             self.generation = generation
-        self.production_start_year = production_start_year
-        self.production_end_year = production_end_year
+        if production_start_year is not None:
+            self.production_start_year = production_start_year
+        if production_end_year is not None:
+            self.production_end_year = production_end_year
         if markets is not None:
             self.markets = markets
 
@@ -99,8 +104,6 @@ class Trim(object):
         :param slug: The slug of this Trim.  # noqa: E501
         :type: str
         """
-        if slug is None:
-            raise ValueError("Invalid value for `slug`, must not be `None`")  # noqa: E501
 
         self._slug = slug
 
@@ -147,8 +150,6 @@ class Trim(object):
         :param trim: The trim of this Trim.  # noqa: E501
         :type: str
         """
-        if trim is None:
-            raise ValueError("Invalid value for `trim`, must not be `None`")  # noqa: E501
 
         self._trim = trim
 
@@ -172,8 +173,6 @@ class Trim(object):
         :param body: The body of this Trim.  # noqa: E501
         :type: str
         """
-        if body is None:
-            raise ValueError("Invalid value for `body`, must not be `None`")  # noqa: E501
 
         self._body = body
 
@@ -220,8 +219,6 @@ class Trim(object):
         :param production_start_year: The production_start_year of this Trim.  # noqa: E501
         :type: int
         """
-        if production_start_year is None:
-            raise ValueError("Invalid value for `production_start_year`, must not be `None`")  # noqa: E501
 
         self._production_start_year = production_start_year
 
@@ -245,8 +242,6 @@ class Trim(object):
         :param production_end_year: The production_end_year of this Trim.  # noqa: E501
         :type: int
         """
-        if production_end_year is None:
-            raise ValueError("Invalid value for `production_end_year`, must not be `None`")  # noqa: E501
 
         self._production_end_year = production_end_year
 

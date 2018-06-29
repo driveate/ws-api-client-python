@@ -90,18 +90,30 @@ class Wheel(object):
 
         if tire_pressure is not None:
             self.tire_pressure = tire_pressure
-        self.rim = rim
-        self.rim_diameter = rim_diameter
-        self.rim_width = rim_width
-        self.rim_offset = rim_offset
-        self.tire = tire
-        self.tire_sizing_system = tire_sizing_system
-        self.tire_construction = tire_construction
-        self.tire_width = tire_width
-        self.tire_aspect_ratio = tire_aspect_ratio
-        self.tire_diameter = tire_diameter
-        self.tire_section_width = tire_section_width
-        self.tire_is_82series = tire_is_82series
+        if rim is not None:
+            self.rim = rim
+        if rim_diameter is not None:
+            self.rim_diameter = rim_diameter
+        if rim_width is not None:
+            self.rim_width = rim_width
+        if rim_offset is not None:
+            self.rim_offset = rim_offset
+        if tire is not None:
+            self.tire = tire
+        if tire_sizing_system is not None:
+            self.tire_sizing_system = tire_sizing_system
+        if tire_construction is not None:
+            self.tire_construction = tire_construction
+        if tire_width is not None:
+            self.tire_width = tire_width
+        if tire_aspect_ratio is not None:
+            self.tire_aspect_ratio = tire_aspect_ratio
+        if tire_diameter is not None:
+            self.tire_diameter = tire_diameter
+        if tire_section_width is not None:
+            self.tire_section_width = tire_section_width
+        if tire_is_82series is not None:
+            self.tire_is_82series = tire_is_82series
         if load_index is not None:
             self.load_index = load_index
         if speed_index is not None:
@@ -148,8 +160,6 @@ class Wheel(object):
         :param rim: The rim of this Wheel.  # noqa: E501
         :type: str
         """
-        if rim is None:
-            raise ValueError("Invalid value for `rim`, must not be `None`")  # noqa: E501
 
         self._rim = rim
 
@@ -173,8 +183,6 @@ class Wheel(object):
         :param rim_diameter: The rim_diameter of this Wheel.  # noqa: E501
         :type: float
         """
-        if rim_diameter is None:
-            raise ValueError("Invalid value for `rim_diameter`, must not be `None`")  # noqa: E501
 
         self._rim_diameter = rim_diameter
 
@@ -198,8 +206,6 @@ class Wheel(object):
         :param rim_width: The rim_width of this Wheel.  # noqa: E501
         :type: float
         """
-        if rim_width is None:
-            raise ValueError("Invalid value for `rim_width`, must not be `None`")  # noqa: E501
 
         self._rim_width = rim_width
 
@@ -223,8 +229,6 @@ class Wheel(object):
         :param rim_offset: The rim_offset of this Wheel.  # noqa: E501
         :type: float
         """
-        if rim_offset is None:
-            raise ValueError("Invalid value for `rim_offset`, must not be `None`")  # noqa: E501
 
         self._rim_offset = rim_offset
 
@@ -248,8 +252,6 @@ class Wheel(object):
         :param tire: The tire of this Wheel.  # noqa: E501
         :type: str
         """
-        if tire is None:
-            raise ValueError("Invalid value for `tire`, must not be `None`")  # noqa: E501
 
         self._tire = tire
 
@@ -273,8 +275,6 @@ class Wheel(object):
         :param tire_sizing_system: The tire_sizing_system of this Wheel.  # noqa: E501
         :type: str
         """
-        if tire_sizing_system is None:
-            raise ValueError("Invalid value for `tire_sizing_system`, must not be `None`")  # noqa: E501
         allowed_values = ["metric", "flotation", "lt-metric", "lt-numeric"]  # noqa: E501
         if tire_sizing_system not in allowed_values:
             raise ValueError(
@@ -304,8 +304,6 @@ class Wheel(object):
         :param tire_construction: The tire_construction of this Wheel.  # noqa: E501
         :type: str
         """
-        if tire_construction is None:
-            raise ValueError("Invalid value for `tire_construction`, must not be `None`")  # noqa: E501
         allowed_values = ["R", "B", "D"]  # noqa: E501
         if tire_construction not in allowed_values:
             raise ValueError(
@@ -335,8 +333,6 @@ class Wheel(object):
         :param tire_width: The tire_width of this Wheel.  # noqa: E501
         :type: float
         """
-        if tire_width is None:
-            raise ValueError("Invalid value for `tire_width`, must not be `None`")  # noqa: E501
 
         self._tire_width = tire_width
 
@@ -360,8 +356,6 @@ class Wheel(object):
         :param tire_aspect_ratio: The tire_aspect_ratio of this Wheel.  # noqa: E501
         :type: float
         """
-        if tire_aspect_ratio is None:
-            raise ValueError("Invalid value for `tire_aspect_ratio`, must not be `None`")  # noqa: E501
 
         self._tire_aspect_ratio = tire_aspect_ratio
 
@@ -385,8 +379,6 @@ class Wheel(object):
         :param tire_diameter: The tire_diameter of this Wheel.  # noqa: E501
         :type: float
         """
-        if tire_diameter is None:
-            raise ValueError("Invalid value for `tire_diameter`, must not be `None`")  # noqa: E501
 
         self._tire_diameter = tire_diameter
 
@@ -410,8 +402,6 @@ class Wheel(object):
         :param tire_section_width: The tire_section_width of this Wheel.  # noqa: E501
         :type: float
         """
-        if tire_section_width is None:
-            raise ValueError("Invalid value for `tire_section_width`, must not be `None`")  # noqa: E501
 
         self._tire_section_width = tire_section_width
 
@@ -435,8 +425,6 @@ class Wheel(object):
         :param tire_is_82series: The tire_is_82series of this Wheel.  # noqa: E501
         :type: bool
         """
-        if tire_is_82series is None:
-            raise ValueError("Invalid value for `tire_is_82series`, must not be `None`")  # noqa: E501
 
         self._tire_is_82series = tire_is_82series
 

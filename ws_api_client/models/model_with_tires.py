@@ -68,12 +68,16 @@ class ModelWithTires(object):
         self._rims = None
         self.discriminator = None
 
-        self.make = make
-        self.model = model
-        self.year = year
+        if make is not None:
+            self.make = make
+        if model is not None:
+            self.model = model
+        if year is not None:
+            self.year = year
         if years is not None:
             self.years = years
-        self.generations = generations
+        if generations is not None:
+            self.generations = generations
         if tires is not None:
             self.tires = tires
         if rims is not None:
@@ -97,8 +101,6 @@ class ModelWithTires(object):
         :param make: The make of this ModelWithTires.  # noqa: E501
         :type: Make
         """
-        if make is None:
-            raise ValueError("Invalid value for `make`, must not be `None`")  # noqa: E501
 
         self._make = make
 
@@ -120,8 +122,6 @@ class ModelWithTires(object):
         :param model: The model of this ModelWithTires.  # noqa: E501
         :type: Model
         """
-        if model is None:
-            raise ValueError("Invalid value for `model`, must not be `None`")  # noqa: E501
 
         self._model = model
 
@@ -145,8 +145,6 @@ class ModelWithTires(object):
         :param year: The year of this ModelWithTires.  # noqa: E501
         :type: int
         """
-        if year is None:
-            raise ValueError("Invalid value for `year`, must not be `None`")  # noqa: E501
 
         self._year = year
 
@@ -191,8 +189,6 @@ class ModelWithTires(object):
         :param generations: The generations of this ModelWithTires.  # noqa: E501
         :type: list[Generation]
         """
-        if generations is None:
-            raise ValueError("Invalid value for `generations`, must not be `None`")  # noqa: E501
 
         self._generations = generations
 

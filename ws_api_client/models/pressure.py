@@ -50,9 +50,12 @@ class Pressure(object):
         self._k_pa = None
         self.discriminator = None
 
-        self.bar = bar
-        self.psi = psi
-        self.k_pa = k_pa
+        if bar is not None:
+            self.bar = bar
+        if psi is not None:
+            self.psi = psi
+        if k_pa is not None:
+            self.k_pa = k_pa
 
     @property
     def bar(self):
@@ -74,8 +77,6 @@ class Pressure(object):
         :param bar: The bar of this Pressure.  # noqa: E501
         :type: float
         """
-        if bar is None:
-            raise ValueError("Invalid value for `bar`, must not be `None`")  # noqa: E501
 
         self._bar = bar
 
@@ -99,8 +100,6 @@ class Pressure(object):
         :param psi: The psi of this Pressure.  # noqa: E501
         :type: float
         """
-        if psi is None:
-            raise ValueError("Invalid value for `psi`, must not be `None`")  # noqa: E501
 
         self._psi = psi
 
@@ -124,8 +123,6 @@ class Pressure(object):
         :param k_pa: The k_pa of this Pressure.  # noqa: E501
         :type: float
         """
-        if k_pa is None:
-            raise ValueError("Invalid value for `k_pa`, must not be `None`")  # noqa: E501
 
         self._k_pa = k_pa
 

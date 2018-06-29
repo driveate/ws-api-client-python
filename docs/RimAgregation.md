@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**diameter** | [**Aggregation**](Aggregation.md) |  | 
-**offset** | [**Aggregation**](Aggregation.md) |  | 
-**width** | [**Aggregation**](Aggregation.md) |  | 
+**diameter** | [**Aggregation**](Aggregation.md) |  | [optional] 
+**offset** | [**Aggregation**](Aggregation.md) |  | [optional] 
+**width** | [**Aggregation**](Aggregation.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

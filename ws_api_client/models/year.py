@@ -47,8 +47,10 @@ class Year(object):
         self._name = None
         self.discriminator = None
 
-        self.slug = slug
-        self.name = name
+        if slug is not None:
+            self.slug = slug
+        if name is not None:
+            self.name = name
 
     @property
     def slug(self):
@@ -70,8 +72,6 @@ class Year(object):
         :param slug: The slug of this Year.  # noqa: E501
         :type: int
         """
-        if slug is None:
-            raise ValueError("Invalid value for `slug`, must not be `None`")  # noqa: E501
 
         self._slug = slug
 
@@ -95,8 +95,6 @@ class Year(object):
         :param name: The name of this Year.  # noqa: E501
         :type: int
         """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 

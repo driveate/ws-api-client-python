@@ -58,10 +58,14 @@ class Tire(object):
 
         if tire is not None:
             self.tire = tire
-        self.width = width
-        self.aspect_ratio = aspect_ratio
-        self.rim_diameter = rim_diameter
-        self.count = count
+        if width is not None:
+            self.width = width
+        if aspect_ratio is not None:
+            self.aspect_ratio = aspect_ratio
+        if rim_diameter is not None:
+            self.rim_diameter = rim_diameter
+        if count is not None:
+            self.count = count
 
     @property
     def tire(self):
@@ -106,8 +110,6 @@ class Tire(object):
         :param width: The width of this Tire.  # noqa: E501
         :type: int
         """
-        if width is None:
-            raise ValueError("Invalid value for `width`, must not be `None`")  # noqa: E501
 
         self._width = width
 
@@ -131,8 +133,6 @@ class Tire(object):
         :param aspect_ratio: The aspect_ratio of this Tire.  # noqa: E501
         :type: int
         """
-        if aspect_ratio is None:
-            raise ValueError("Invalid value for `aspect_ratio`, must not be `None`")  # noqa: E501
 
         self._aspect_ratio = aspect_ratio
 
@@ -156,8 +156,6 @@ class Tire(object):
         :param rim_diameter: The rim_diameter of this Tire.  # noqa: E501
         :type: float
         """
-        if rim_diameter is None:
-            raise ValueError("Invalid value for `rim_diameter`, must not be `None`")  # noqa: E501
 
         self._rim_diameter = rim_diameter
 
@@ -181,8 +179,6 @@ class Tire(object):
         :param count: The count of this Tire.  # noqa: E501
         :type: int
         """
-        if count is None:
-            raise ValueError("Invalid value for `count`, must not be `None`")  # noqa: E501
 
         self._count = count
 

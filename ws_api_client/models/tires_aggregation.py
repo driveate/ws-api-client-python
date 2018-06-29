@@ -56,10 +56,14 @@ class TiresAggregation(object):
         self._tire_size = None
         self.discriminator = None
 
-        self.aspect_ratio = aspect_ratio
-        self.diameter = diameter
-        self.width = width
-        self.tire_size = tire_size
+        if aspect_ratio is not None:
+            self.aspect_ratio = aspect_ratio
+        if diameter is not None:
+            self.diameter = diameter
+        if width is not None:
+            self.width = width
+        if tire_size is not None:
+            self.tire_size = tire_size
 
     @property
     def aspect_ratio(self):
@@ -79,8 +83,6 @@ class TiresAggregation(object):
         :param aspect_ratio: The aspect_ratio of this TiresAggregation.  # noqa: E501
         :type: Aggregation
         """
-        if aspect_ratio is None:
-            raise ValueError("Invalid value for `aspect_ratio`, must not be `None`")  # noqa: E501
 
         self._aspect_ratio = aspect_ratio
 
@@ -102,8 +104,6 @@ class TiresAggregation(object):
         :param diameter: The diameter of this TiresAggregation.  # noqa: E501
         :type: Aggregation
         """
-        if diameter is None:
-            raise ValueError("Invalid value for `diameter`, must not be `None`")  # noqa: E501
 
         self._diameter = diameter
 
@@ -125,8 +125,6 @@ class TiresAggregation(object):
         :param width: The width of this TiresAggregation.  # noqa: E501
         :type: Aggregation
         """
-        if width is None:
-            raise ValueError("Invalid value for `width`, must not be `None`")  # noqa: E501
 
         self._width = width
 
@@ -148,8 +146,6 @@ class TiresAggregation(object):
         :param tire_size: The tire_size of this TiresAggregation.  # noqa: E501
         :type: SizeAggregation
         """
-        if tire_size is None:
-            raise ValueError("Invalid value for `tire_size`, must not be `None`")  # noqa: E501
 
         self._tire_size = tire_size
 

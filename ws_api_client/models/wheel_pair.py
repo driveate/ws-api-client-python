@@ -55,10 +55,14 @@ class WheelPair(object):
         self._rear = None
         self.discriminator = None
 
-        self.showing_fp_only = showing_fp_only
-        self.is_stock = is_stock
-        self.front = front
-        self.rear = rear
+        if showing_fp_only is not None:
+            self.showing_fp_only = showing_fp_only
+        if is_stock is not None:
+            self.is_stock = is_stock
+        if front is not None:
+            self.front = front
+        if rear is not None:
+            self.rear = rear
 
     @property
     def showing_fp_only(self):
@@ -80,8 +84,6 @@ class WheelPair(object):
         :param showing_fp_only: The showing_fp_only of this WheelPair.  # noqa: E501
         :type: bool
         """
-        if showing_fp_only is None:
-            raise ValueError("Invalid value for `showing_fp_only`, must not be `None`")  # noqa: E501
 
         self._showing_fp_only = showing_fp_only
 
@@ -105,8 +107,6 @@ class WheelPair(object):
         :param is_stock: The is_stock of this WheelPair.  # noqa: E501
         :type: bool
         """
-        if is_stock is None:
-            raise ValueError("Invalid value for `is_stock`, must not be `None`")  # noqa: E501
 
         self._is_stock = is_stock
 
@@ -128,8 +128,6 @@ class WheelPair(object):
         :param front: The front of this WheelPair.  # noqa: E501
         :type: Wheel
         """
-        if front is None:
-            raise ValueError("Invalid value for `front`, must not be `None`")  # noqa: E501
 
         self._front = front
 
@@ -151,8 +149,6 @@ class WheelPair(object):
         :param rear: The rear of this WheelPair.  # noqa: E501
         :type: Wheel
         """
-        if rear is None:
-            raise ValueError("Invalid value for `rear`, must not be `None`")  # noqa: E501
 
         self._rear = rear
 

@@ -47,8 +47,10 @@ class Country(object):
         self._name = None
         self.discriminator = None
 
-        self.slug = slug
-        self.name = name
+        if slug is not None:
+            self.slug = slug
+        if name is not None:
+            self.name = name
 
     @property
     def slug(self):
@@ -70,8 +72,6 @@ class Country(object):
         :param slug: The slug of this Country.  # noqa: E501
         :type: str
         """
-        if slug is None:
-            raise ValueError("Invalid value for `slug`, must not be `None`")  # noqa: E501
 
         self._slug = slug
 
@@ -95,8 +95,6 @@ class Country(object):
         :param name: The name of this Country.  # noqa: E501
         :type: str
         """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 

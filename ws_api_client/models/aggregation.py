@@ -50,9 +50,12 @@ class Aggregation(object):
         self._units = None
         self.discriminator = None
 
-        self.min = min
-        self.max = max
-        self.units = units
+        if min is not None:
+            self.min = min
+        if max is not None:
+            self.max = max
+        if units is not None:
+            self.units = units
 
     @property
     def min(self):
@@ -74,8 +77,6 @@ class Aggregation(object):
         :param min: The min of this Aggregation.  # noqa: E501
         :type: float
         """
-        if min is None:
-            raise ValueError("Invalid value for `min`, must not be `None`")  # noqa: E501
 
         self._min = min
 
@@ -99,8 +100,6 @@ class Aggregation(object):
         :param max: The max of this Aggregation.  # noqa: E501
         :type: float
         """
-        if max is None:
-            raise ValueError("Invalid value for `max`, must not be `None`")  # noqa: E501
 
         self._max = max
 
@@ -124,8 +123,6 @@ class Aggregation(object):
         :param units: The units of this Aggregation.  # noqa: E501
         :type: str
         """
-        if units is None:
-            raise ValueError("Invalid value for `units`, must not be `None`")  # noqa: E501
 
         self._units = units
 

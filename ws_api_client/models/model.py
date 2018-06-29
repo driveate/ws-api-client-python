@@ -50,9 +50,12 @@ class Model(object):
         self._name_en = None
         self.discriminator = None
 
-        self.slug = slug
-        self.name = name
-        self.name_en = name_en
+        if slug is not None:
+            self.slug = slug
+        if name is not None:
+            self.name = name
+        if name_en is not None:
+            self.name_en = name_en
 
     @property
     def slug(self):
@@ -74,8 +77,6 @@ class Model(object):
         :param slug: The slug of this Model.  # noqa: E501
         :type: str
         """
-        if slug is None:
-            raise ValueError("Invalid value for `slug`, must not be `None`")  # noqa: E501
 
         self._slug = slug
 
@@ -99,8 +100,6 @@ class Model(object):
         :param name: The name of this Model.  # noqa: E501
         :type: str
         """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 
@@ -124,8 +123,6 @@ class Model(object):
         :param name_en: The name_en of this Model.  # noqa: E501
         :type: str
         """
-        if name_en is None:
-            raise ValueError("Invalid value for `name_en`, must not be `None`")  # noqa: E501
 
         self._name_en = name_en
 

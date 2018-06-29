@@ -52,9 +52,12 @@ class RimAgregation(object):
         self._width = None
         self.discriminator = None
 
-        self.diameter = diameter
-        self.offset = offset
-        self.width = width
+        if diameter is not None:
+            self.diameter = diameter
+        if offset is not None:
+            self.offset = offset
+        if width is not None:
+            self.width = width
 
     @property
     def diameter(self):
@@ -74,8 +77,6 @@ class RimAgregation(object):
         :param diameter: The diameter of this RimAgregation.  # noqa: E501
         :type: Aggregation
         """
-        if diameter is None:
-            raise ValueError("Invalid value for `diameter`, must not be `None`")  # noqa: E501
 
         self._diameter = diameter
 
@@ -97,8 +98,6 @@ class RimAgregation(object):
         :param offset: The offset of this RimAgregation.  # noqa: E501
         :type: Aggregation
         """
-        if offset is None:
-            raise ValueError("Invalid value for `offset`, must not be `None`")  # noqa: E501
 
         self._offset = offset
 
@@ -120,8 +119,6 @@ class RimAgregation(object):
         :param width: The width of this RimAgregation.  # noqa: E501
         :type: Aggregation
         """
-        if width is None:
-            raise ValueError("Invalid value for `width`, must not be `None`")  # noqa: E501
 
         self._width = width
 

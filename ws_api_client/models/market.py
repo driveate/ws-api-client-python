@@ -53,10 +53,14 @@ class Market(object):
         self._name_en = None
         self.discriminator = None
 
-        self.slug = slug
-        self.abbr = abbr
-        self.name = name
-        self.name_en = name_en
+        if slug is not None:
+            self.slug = slug
+        if abbr is not None:
+            self.abbr = abbr
+        if name is not None:
+            self.name = name
+        if name_en is not None:
+            self.name_en = name_en
 
     @property
     def slug(self):
@@ -78,8 +82,6 @@ class Market(object):
         :param slug: The slug of this Market.  # noqa: E501
         :type: str
         """
-        if slug is None:
-            raise ValueError("Invalid value for `slug`, must not be `None`")  # noqa: E501
         if slug is not None and not re.search('^[-a-zA-Z0-9_]+$', slug):  # noqa: E501
             raise ValueError("Invalid value for `slug`, must be a follow pattern or equal to `/^[-a-zA-Z0-9_]+$/`")  # noqa: E501
 
@@ -105,8 +107,6 @@ class Market(object):
         :param abbr: The abbr of this Market.  # noqa: E501
         :type: str
         """
-        if abbr is None:
-            raise ValueError("Invalid value for `abbr`, must not be `None`")  # noqa: E501
 
         self._abbr = abbr
 
@@ -130,8 +130,6 @@ class Market(object):
         :param name: The name of this Market.  # noqa: E501
         :type: str
         """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 
@@ -155,8 +153,6 @@ class Market(object):
         :param name_en: The name_en of this Market.  # noqa: E501
         :type: str
         """
-        if name_en is None:
-            raise ValueError("Invalid value for `name_en`, must not be `None`")  # noqa: E501
 
         self._name_en = name_en
 

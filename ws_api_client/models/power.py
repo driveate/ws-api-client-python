@@ -50,9 +50,12 @@ class Power(object):
         self._k_w = None
         self.discriminator = None
 
-        self.ps = ps
-        self.hp = hp
-        self.k_w = k_w
+        if ps is not None:
+            self.ps = ps
+        if hp is not None:
+            self.hp = hp
+        if k_w is not None:
+            self.k_w = k_w
 
     @property
     def ps(self):
@@ -74,8 +77,6 @@ class Power(object):
         :param ps: The ps of this Power.  # noqa: E501
         :type: float
         """
-        if ps is None:
-            raise ValueError("Invalid value for `ps`, must not be `None`")  # noqa: E501
 
         self._ps = ps
 
@@ -99,8 +100,6 @@ class Power(object):
         :param hp: The hp of this Power.  # noqa: E501
         :type: float
         """
-        if hp is None:
-            raise ValueError("Invalid value for `hp`, must not be `None`")  # noqa: E501
 
         self._hp = hp
 
@@ -124,8 +123,6 @@ class Power(object):
         :param k_w: The k_w of this Power.  # noqa: E501
         :type: float
         """
-        if k_w is None:
-            raise ValueError("Invalid value for `k_w`, must not be `None`")  # noqa: E501
 
         self._k_w = k_w
 

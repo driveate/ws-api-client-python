@@ -47,8 +47,10 @@ class SizeAggregation(object):
         self._max = None
         self.discriminator = None
 
-        self.min = min
-        self.max = max
+        if min is not None:
+            self.min = min
+        if max is not None:
+            self.max = max
 
     @property
     def min(self):
@@ -70,8 +72,6 @@ class SizeAggregation(object):
         :param min: The min of this SizeAggregation.  # noqa: E501
         :type: str
         """
-        if min is None:
-            raise ValueError("Invalid value for `min`, must not be `None`")  # noqa: E501
 
         self._min = min
 
@@ -95,8 +95,6 @@ class SizeAggregation(object):
         :param max: The max of this SizeAggregation.  # noqa: E501
         :type: str
         """
-        if max is None:
-            raise ValueError("Invalid value for `max`, must not be `None`")  # noqa: E501
 
         self._max = max
 

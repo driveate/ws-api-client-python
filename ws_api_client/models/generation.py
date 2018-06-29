@@ -58,8 +58,10 @@ class Generation(object):
         self._years = None
         self.discriminator = None
 
-        self.name = name
-        self.bodies = bodies
+        if name is not None:
+            self.name = name
+        if bodies is not None:
+            self.bodies = bodies
         if start_year is not None:
             self.start_year = start_year
         if end_year is not None:
@@ -87,8 +89,6 @@ class Generation(object):
         :param name: The name of this Generation.  # noqa: E501
         :type: str
         """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 
@@ -110,8 +110,6 @@ class Generation(object):
         :param bodies: The bodies of this Generation.  # noqa: E501
         :type: list[Body]
         """
-        if bodies is None:
-            raise ValueError("Invalid value for `bodies`, must not be `None`")  # noqa: E501
 
         self._bodies = bodies
 

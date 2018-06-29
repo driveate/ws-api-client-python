@@ -66,10 +66,14 @@ class GenerationWithMakeAndModel(object):
         self._years = None
         self.discriminator = None
 
-        self.make = make
-        self.model = model
-        self.name = name
-        self.bodies = bodies
+        if make is not None:
+            self.make = make
+        if model is not None:
+            self.model = model
+        if name is not None:
+            self.name = name
+        if bodies is not None:
+            self.bodies = bodies
         if start_year is not None:
             self.start_year = start_year
         if end_year is not None:
@@ -95,8 +99,6 @@ class GenerationWithMakeAndModel(object):
         :param make: The make of this GenerationWithMakeAndModel.  # noqa: E501
         :type: Make
         """
-        if make is None:
-            raise ValueError("Invalid value for `make`, must not be `None`")  # noqa: E501
 
         self._make = make
 
@@ -118,8 +120,6 @@ class GenerationWithMakeAndModel(object):
         :param model: The model of this GenerationWithMakeAndModel.  # noqa: E501
         :type: Model
         """
-        if model is None:
-            raise ValueError("Invalid value for `model`, must not be `None`")  # noqa: E501
 
         self._model = model
 
@@ -143,8 +143,6 @@ class GenerationWithMakeAndModel(object):
         :param name: The name of this GenerationWithMakeAndModel.  # noqa: E501
         :type: str
         """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 
@@ -166,8 +164,6 @@ class GenerationWithMakeAndModel(object):
         :param bodies: The bodies of this GenerationWithMakeAndModel.  # noqa: E501
         :type: list[Body]
         """
-        if bodies is None:
-            raise ValueError("Invalid value for `bodies`, must not be `None`")  # noqa: E501
 
         self._bodies = bodies
 

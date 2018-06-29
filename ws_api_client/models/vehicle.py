@@ -91,21 +91,32 @@ class Vehicle(object):
         self._wheels = None
         self.discriminator = None
 
-        self.market = market
-        self.body = body
-        self.trim = trim
-        self.slug = slug
-        self.generation = generation
-        self.stud_holes = stud_holes
-        self.pcd = pcd
-        self.centre_bore = centre_bore
+        if market is not None:
+            self.market = market
+        if body is not None:
+            self.body = body
+        if trim is not None:
+            self.trim = trim
+        if slug is not None:
+            self.slug = slug
+        if generation is not None:
+            self.generation = generation
+        if stud_holes is not None:
+            self.stud_holes = stud_holes
+        if pcd is not None:
+            self.pcd = pcd
+        if centre_bore is not None:
+            self.centre_bore = centre_bore
         if lock_type is not None:
             self.lock_type = lock_type
-        self.lock_text = lock_text
-        self.bolt_pattern = bolt_pattern
+        if lock_text is not None:
+            self.lock_text = lock_text
+        if bolt_pattern is not None:
+            self.bolt_pattern = bolt_pattern
         if power is not None:
             self.power = power
-        self.engine_type = engine_type
+        if engine_type is not None:
+            self.engine_type = engine_type
         if fuel is not None:
             self.fuel = fuel
         if wheels is not None:
@@ -129,8 +140,6 @@ class Vehicle(object):
         :param market: The market of this Vehicle.  # noqa: E501
         :type: Market
         """
-        if market is None:
-            raise ValueError("Invalid value for `market`, must not be `None`")  # noqa: E501
 
         self._market = market
 
@@ -154,8 +163,6 @@ class Vehicle(object):
         :param body: The body of this Vehicle.  # noqa: E501
         :type: str
         """
-        if body is None:
-            raise ValueError("Invalid value for `body`, must not be `None`")  # noqa: E501
 
         self._body = body
 
@@ -179,8 +186,6 @@ class Vehicle(object):
         :param trim: The trim of this Vehicle.  # noqa: E501
         :type: str
         """
-        if trim is None:
-            raise ValueError("Invalid value for `trim`, must not be `None`")  # noqa: E501
 
         self._trim = trim
 
@@ -204,8 +209,6 @@ class Vehicle(object):
         :param slug: The slug of this Vehicle.  # noqa: E501
         :type: str
         """
-        if slug is None:
-            raise ValueError("Invalid value for `slug`, must not be `None`")  # noqa: E501
 
         self._slug = slug
 
@@ -227,8 +230,6 @@ class Vehicle(object):
         :param generation: The generation of this Vehicle.  # noqa: E501
         :type: Generation
         """
-        if generation is None:
-            raise ValueError("Invalid value for `generation`, must not be `None`")  # noqa: E501
 
         self._generation = generation
 
@@ -252,8 +253,6 @@ class Vehicle(object):
         :param stud_holes: The stud_holes of this Vehicle.  # noqa: E501
         :type: int
         """
-        if stud_holes is None:
-            raise ValueError("Invalid value for `stud_holes`, must not be `None`")  # noqa: E501
 
         self._stud_holes = stud_holes
 
@@ -277,8 +276,6 @@ class Vehicle(object):
         :param pcd: The pcd of this Vehicle.  # noqa: E501
         :type: float
         """
-        if pcd is None:
-            raise ValueError("Invalid value for `pcd`, must not be `None`")  # noqa: E501
 
         self._pcd = pcd
 
@@ -302,8 +299,6 @@ class Vehicle(object):
         :param centre_bore: The centre_bore of this Vehicle.  # noqa: E501
         :type: float
         """
-        if centre_bore is None:
-            raise ValueError("Invalid value for `centre_bore`, must not be `None`")  # noqa: E501
 
         self._centre_bore = centre_bore
 
@@ -354,8 +349,6 @@ class Vehicle(object):
         :param lock_text: The lock_text of this Vehicle.  # noqa: E501
         :type: str
         """
-        if lock_text is None:
-            raise ValueError("Invalid value for `lock_text`, must not be `None`")  # noqa: E501
 
         self._lock_text = lock_text
 
@@ -379,8 +372,6 @@ class Vehicle(object):
         :param bolt_pattern: The bolt_pattern of this Vehicle.  # noqa: E501
         :type: str
         """
-        if bolt_pattern is None:
-            raise ValueError("Invalid value for `bolt_pattern`, must not be `None`")  # noqa: E501
 
         self._bolt_pattern = bolt_pattern
 
@@ -425,8 +416,6 @@ class Vehicle(object):
         :param engine_type: The engine_type of this Vehicle.  # noqa: E501
         :type: str
         """
-        if engine_type is None:
-            raise ValueError("Invalid value for `engine_type`, must not be `None`")  # noqa: E501
 
         self._engine_type = engine_type
 
